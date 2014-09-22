@@ -76,11 +76,6 @@ module Nsync
       diff = config.cd { repo.git.native('diff', {:full_index => true}) }
       diff += diff_untracked_files
 
-      if diff =~ /diff --git a/
-        diff = diff.sub(/.*?(diff --git a)/m, '\1')
-      else
-        diff = ''
-      end
 
       diffs = Grit::Diff.list_from_string(repo, diff)
       changeset_from_diffs(diffs, Change)
