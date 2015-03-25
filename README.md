@@ -1,6 +1,8 @@
 Nsync: Git based database synchronization
 =========================================
 
+foobar test
+
 Nsync allows you to keep disparate data sources synchronized for core data.
 The use case this is designed to solve is when you have a data processing
 system and one or many consumer facing services that depend on a canonical,
